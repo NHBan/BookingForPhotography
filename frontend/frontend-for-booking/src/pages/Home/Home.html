@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khung Hình - Tìm người chụp đúng gu của bạn</title>
+    <meta name="description" content="Xem portfolio thật, so sánh giá và đặt lịch với nhiếp ảnh gia chuyên nghiệp trong khu vực của bạn.">
+    <meta name="keywords" content="tìm nhiếp ảnh gia, đặt lịch chụp ảnh, portfolio nhiếp ảnh, khung hình">
+    
+    <!-- Link tới file CSS chuẩn -->
+    <link rel="stylesheet" href="./Home.modul.css">
+</head>
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../../../public/Gemini_Generated_Image_qitkv9qitkv9qitk.png"><img src="logo.png" alt="Khung Hình Logo"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/" class="active">Trang chủ</a></li>
+                    <li><a href="/nhiep-anh-gia">Nhiếp ảnh gia</a></li>
+                    <li><a href="/thu-vien-anh">Thư viện ảnh</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="/dang-nhap" class="btn-login">Đăng nhập</a>
+                <a href="/dang-ky" class="btn-register">Đăng ký</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+        
+        <!-- SECTION 1: HERO (Tìm kiếm & Ảnh mẫu) -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <!-- Cột nội dung tìm kiếm -->
+                <div class="hero-content">
+                    <h1 class="hero-title">Tìm người chụp đúng gu của bạn</h1>
+                    <p class="hero-description">
+                        Xem portfolio thật, so sánh giá và đặt lịch với nhiếp ảnh gia trong khu vực của bạn.
+                    </p>
+
+                    <form action="/tim-kiem" method="GET" class="search-box">
+                        <div class="form-group">
+                            <label for="category">Thể loại</label>
+                            <select id="category" name="the-loai">
+                                <option value="tat-ca">Tất cả</option>
+                                <option value="chan-dung">Chân dung</option>
+                                <option value="phong-canh">Phong cảnh</option>
+                                <option value="su-kien">Sự kiện</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Khu vực</label>
+                            <select id="location" name="khu-vuc">
+                                <option value="toan-quoc">Toàn quốc</option>
+                                <option value="ha-noi">Hà Nội</option>
+                                <option value="ho-chi-minh">Hồ Chí Minh</option>
+                                <option value="da-nang">Đà Nẵng</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Ngày chụp</label>
+                            <input type="date" id="date" name="ngay-chup" placeholder="dd/mm/yyyy">
+                        </div>
+                        <button type="submit" class="btn-search">Tìm nhiếp ảnh gia</button>
+                    </form>
+                </div>
+
+                <!-- Cột thư viện ảnh mẫu -->
+                <div class="hero-gallery" aria-label="Bộ sưu tập ảnh mẫu">
+                    <div class="gallery-item item-large">
+                        <figure>
+                            <img src="image-1.jpg" alt="Ảnh mẫu chân dung">
+                            <figcaption class="sr-only">Ảnh 1</figcaption>
+                        </figure>
+                    </div>
+                    <div class="gallery-item item-small-top">
+                        <figure>
+                            <img src="image-2.jpg" alt="Ảnh mẫu portfolio">
+                            <figcaption class="sr-only">Ảnh 2</figcaption>
+                        </figure>
+                    </div>
+                    <div class="gallery-item item-small-bottom">
+                        <figure>
+                            <img src="image-3.jpg" alt="Ảnh mẫu khoảnh khắc">
+                            <figcaption class="sr-only">Ảnh 3</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: DANH SÁCH NHIẾP ẢNH GIA -->
+        <section class="featured-photographers">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nhiếp ảnh gia được đặt nhiều</h2>
+                    <a href="/nhiep-anh-gia" class="view-more-link">Xem thêm</a>
+                </div>
+
+                <div class="photographer-grid">
+                    <!-- Card 1 -->
+                    <article class="photographer-card">
+                        <div class="card-image">
+                            <img src="photographer-1.jpg" alt="Minh Anh - Chân dung, Hà Nội">
+                        </div>
+                        <div class="card-info">
+                            <h3>Minh Anh</h3>
+                            <p class="specialty">Chân dung, Hà Nội</p>
+                            <div class="card-footer">
+                                <span class="price">Từ 1.200.000đ</span>
+                                <span class="rating">4,9/5</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="photographer-card">
+                        <div class="card-image">
+                            <img src="photographer-2.jpg" alt="Quốc Bảo - Ảnh cưới, TP. HCM">
+                        </div>
+                        <div class="card-info">
+                            <h3>Quốc Bảo</h3>
+                            <p class="specialty">Ảnh cưới, TP. HCM</p>
+                            <div class="card-footer">
+                                <span class="price">Từ 6.500.000đ</span>
+                                <span class="rating">4,8/5</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="photographer-card">
+                        <div class="card-image">
+                            <img src="photographer-3.jpg" alt="Thu Hà - Gia đình, Đà Nẵng">
+                        </div>
+                        <div class="card-info">
+                            <h3>Thu Hà</h3>
+                            <p class="specialty">Gia đình, Đà Nẵng</p>
+                            <div class="card-footer">
+                                <span class="price">Từ 1.800.000đ</span>
+                                <span class="rating">5,0/5</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="photographer-card">
+                        <div class="card-image">
+                            <img src="photographer-4.jpg" alt="Đức Long - Sự kiện, Hà Nội">
+                        </div>
+                        <div class="card-info">
+                            <h3>Đức Long</h3>
+                            <p class="specialty">Sự kiện, Hà Nội</p>
+                            <div class="card-footer">
+                                <span class="price">Từ 3.000.000đ</span>
+                                <span class="rating">4,7/5</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: BANNER CTA (Kêu gọi hành động) -->
+        <section class="photographer-cta-section">
+            <div class="container">
+                <div class="cta-banner">
+                    <div class="cta-content">
+                        <h2>Bạn là nhiếp ảnh gia?</h2>
+                        <p>Đăng portfolio, nhận khách và quản lý lịch chụp ở một nơi.</p>
+                    </div>
+                    <div class="cta-action">
+                        <a href="/tao-ho-so" class="btn-create-profile">Tạo hồ sơ nhiếp ảnh gia</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

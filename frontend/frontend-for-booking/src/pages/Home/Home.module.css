@@ -1,0 +1,462 @@
+/* =========================================================
+   1. VARIABLES (BIẾN CSS CHO MÀU SẮC & KÍCH THƯỚC)
+   ========================================================= */
+:root {
+    --color-primary: #A3D1C6;      /* Xanh ngọc bích */
+    --color-primary-dark: #8cbaaf; /* Xanh ngọc bích đậm hơn cho hover */
+    --color-dark: #111111;         /* Đen nhạt cho chữ */
+    --color-gray: #666666;         /* Xám cho chữ phụ */
+    --color-bg-dark: #161a1d;      /* Đen đậm cho nút và banner */
+    --color-accent: #ffc107;       /* Vàng cam cho CTA */
+    
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --transition-speed: 0.3s;
+}
+
+/* =========================================================
+   2. RESET & BASE
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--color-dark);
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Lớp ẩn cho trình đọc màn hình (SEO) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Bỏ các class tiện ích rời rạc, tích hợp thẳng vào giao diện */
+/* =========================================================
+   3. HEADER
+   ========================================================= */
+.site-header {
+    padding: 20px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 32px;
+}
+
+.main-nav a {
+    font-size: 15px;
+    color: var(--color-gray);
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+.main-nav a.active, .main-nav a:hover {
+    color: var(--color-dark);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-login {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.btn-register {
+    background-color: var(--color-dark);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-register:hover {
+    background-color: #333;
+}
+
+/* =========================================================
+   4. HERO SECTION
+   ========================================================= */
+.hero-section {
+    padding: 60px 0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: var(--color-dark);
+}
+
+.hero-description {
+    font-size: 16px;
+    color: var(--color-gray);
+    margin-bottom: 32px;
+    max-width: 480px;
+}
+
+/* --- Khung tìm kiếm --- */
+.search-box {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius-lg);
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+    border-radius: var(--border-radius-sm);
+    background-color: #f9f9f9;
+}
+
+.form-group label {
+    font-size: 12px;
+    color: var(--color-gray);
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.form-group select, 
+.form-group input {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: var(--color-dark);
+    outline: none;
+    font-weight: 500;
+    width: 100%;
+}
+
+.btn-search {
+    grid-column: span 3;
+    background-color: var(--color-bg-dark);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: var(--border-radius-md);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+.btn-search:hover {
+    background-color: #000;
+}
+
+/* --- Thư viện ảnh Hero --- */
+.hero-gallery {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 200px 200px;
+    gap: 16px;
+}
+
+.gallery-item {
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Phóng to nhẹ ảnh khi hover */
+}
+
+.item-large {
+    grid-row: span 2;
+    background-color: var(--color-primary); /* Áp dụng biến màu xanh ngọc bích */
+    border-top-left-radius: 100px; 
+}
+.item-small-top { background-color: #d1b89d; }
+.item-small-bottom { background-color: #8da4b4; }
+
+/* =========================================================
+   5. FEATURED PHOTOGRAPHERS CARDS
+   ========================================================= */
+.featured-photographers {
+    padding: 40px 0 80px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.section-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.view-more-link {
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: underline;
+    transition: color var(--transition-speed);
+}
+
+.view-more-link:hover {
+    color: var(--color-gray);
+}
+
+.photographer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.photographer-card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.photographer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08); /* Bóng đổ mềm mượt hơn */
+}
+
+.card-image {
+    width: 100%;
+    height: 320px;
+    background-color: #e5e5e5;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Background giả lập khi chưa có ảnh */
+.photographer-card:nth-child(1) .card-image { background-color: var(--color-primary); }
+.photographer-card:nth-child(2) .card-image { background-color: #bfaab5; }
+.photographer-card:nth-child(3) .card-image { background-color: #d1b89d; }
+.photographer-card:nth-child(4) .card-image { background-color: #8da4b4; }
+
+.card-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-info h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.card-info .specialty {
+    font-size: 14px;
+    color: var(--color-gray);
+    margin-bottom: 16px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Hiệu ứng giá tiền đẹp mắt */
+.card-footer .price {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-dark);
+    position: relative;
+    display: inline-block;
+    transition: color var(--transition-speed);
+}
+
+/* Hover đổi màu xanh ngọc bích và xuất hiện gạch chân */
+.photographer-card:hover .price {
+    color: var(--color-primary-dark);
+}
+
+.card-footer .price::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-primary-dark);
+    transition: width var(--transition-speed) ease;
+}
+
+.photographer-card:hover .price::after {
+    width: 100%; 
+}
+
+.card-footer .rating {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   6. BANNER CTA
+   ========================================================= */
+.photographer-cta-section {
+    padding: 20px 0 60px 0;
+}
+
+.cta-banner {
+    background-color: var(--color-bg-dark);
+    border-radius: 20px;
+    padding: 36px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.cta-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.cta-content p {
+    font-size: 15px;
+    color: #a0a0a0;
+    font-weight: 400;
+}
+
+.btn-create-profile {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    padding: 14px 28px;
+    border-radius: var(--border-radius-md);
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color var(--transition-speed), transform 0.2s;
+    display: inline-block;
+}
+
+.btn-create-profile:hover {
+    background-color: #ffca2c;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   7. RESPONSIVE / MEDIA QUERIES
+   ========================================================= */
+@media (max-width: 1024px) {
+    .photographer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+    }
+    
+    .cta-action, .btn-create-profile {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .photographer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-box {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn-search {
+        grid-column: span 1;
+    }
+}

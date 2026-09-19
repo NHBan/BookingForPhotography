@@ -1,0 +1,32 @@
+/* =========================================
+   src/App.css - CSS Global cho toàn bộ App
+   ========================================= */
+
+/* Reset CSS cơ bản cho toàn bộ dự án */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #111111;
+  background-color: #ffffff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Class App bọc ngoài cùng */
+.App {
+  min-height: 100vh; /* Đảm bảo app luôn cao bằng ít nhất 100% màn hình */
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
